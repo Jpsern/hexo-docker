@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   web:
+    container_name: hexo-app
     build: ./node
     ports:
       - "80:80"
