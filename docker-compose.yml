@@ -3,5 +3,4 @@ services:
   web:
     build: ./node
     ports:
-      - "4000:4000"
-
+      - "80:80"
