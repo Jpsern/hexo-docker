@@ -20,4 +20,7 @@ CMD ["/usr/sbin/init"]
 RUN yum install -y epel-release
 # Install Node.js and npm
 RUN yum install -y nodejs npm
-
+# Install hexo-cli
+RUN npm install -g hexo-cli
+# Hexo用のポートを開ける
+EXPOSE 4000
