@@ -14,7 +14,6 @@ rm -f /lib/systemd/system/sockets.target.wants/*initctl*; \
 rm -f /lib/systemd/system/basic.target.wants/*;\
 rm -f /lib/systemd/system/anaconda.target.wants/*;
 VOLUME [ "/sys/fs/cgroup" ]
-CMD ["/usr/sbin/init"]
 
 # Enable Extra Packages for Enterprise Linux (EPEL) for CentOS
 RUN yum install -y epel-release
@@ -23,10 +22,11 @@ RUN yum install -y nodejs npm
 # Install and setting for Apache
 RUN yum install -y httpd
 RUN systemctl enable httpd
-RUN systemctl restart httpd
 RUN mkdir -p /var/app
 COPY ./conf/*.conf /etc/httpd/conf.d/
 # Install hexo-cli
 RUN npm install -g hexo-cli
+
+CMD ["/sbin/init"]
 # Hexo用のポートを開ける
 EXPOSE 80

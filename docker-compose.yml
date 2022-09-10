@@ -6,3 +6,4 @@ services:
       - "80:80"
     # systemctl を使うため特権の有効化
     privileged: true
+    command: /sbin/init
