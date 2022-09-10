@@ -4,3 +4,5 @@ services:
     build: ./node
     ports:
       - "80:80"
+    # systemctl を使うため特権の有効化
+    privileged: true
