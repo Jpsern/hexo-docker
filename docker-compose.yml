@@ -1,9 +1,14 @@
 version: "3.9"
 services:
   web:
+    container_name: hexo-app
     build: ./node
     ports:
       - "80:80"
     # systemctl を使うため特権の有効化
     privileged: true
     command: /sbin/init
+    volumes:
+      - type: bind
+        source: "./app"
+        target: "/var/app"
