@@ -15,4 +15,4 @@ services:
     volumes:
       - type: bind
         source: "./app/public"
-        target: "/var/app"
+        target: "/usr/local/apache2/htdocs"
