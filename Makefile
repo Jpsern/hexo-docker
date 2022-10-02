@@ -11,5 +11,6 @@ down:
 .PHONY: down
 
 gen:
-	docker-compose run --rm node hexo g
+	docker-compose run --rm node yarn install
+	docker-compose run --rm node hexo generate
 .PHONY: gen
