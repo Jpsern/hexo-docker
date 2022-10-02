@@ -16,3 +16,10 @@ services:
       - type: bind
         source: "./app/public"
         target: "/usr/local/apache2/htdocs"
+  https-portal:
+    image: steveltn/https-portal:1
+    ports:
+      - '443:443'
+    environment:
+      STAGE: local
+      DOMAINS: 'localhost -> http://apache:80'
