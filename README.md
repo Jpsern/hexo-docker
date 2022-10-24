@@ -1,4 +1,4 @@
-# hexo-docker
+# hexo-docker-template
 ## Require
 - Make
 
