@@ -1,4 +1,7 @@
 # hexo-docker
+## Require
+- Make
+
 ## Usage
 
 ### setup
