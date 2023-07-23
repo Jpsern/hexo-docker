@@ -25,6 +25,6 @@ clean:
 .PHONY: clean
 
 gen:
-	docker-compose run --rm node yarn install
+	docker-compose run --rm node npm install
 	docker-compose run --rm node hexo generate
 .PHONY: gen
