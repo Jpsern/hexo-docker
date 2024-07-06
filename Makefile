@@ -11,6 +11,7 @@ help: ## このヘルプメッセージを出力
 
 build: ## コンテナ初期化
 	docker-compose build --no-cache
+	make gen
 .PHONY: build
 
 up: ## コンテナ起動
