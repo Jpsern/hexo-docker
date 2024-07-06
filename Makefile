@@ -33,7 +33,6 @@ restart: ## コンテナ再起動
 
 clean: ## hexo generate の成果物を掃除
 	docker-compose run --rm node hexo clean
-	git checkout app/public
 .PHONY: clean
 
 gen: ## hexo generate 実行
